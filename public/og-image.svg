@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#faf7f2"/>
+
+  <!-- Decorative blob top-right -->
+  <ellipse cx="1050" cy="80" rx="250" ry="180" fill="#a8c5ab" opacity="0.2"/>
+
+  <!-- Decorative blob bottom-left -->
+  <ellipse cx="150" cy="550" rx="200" ry="150" fill="#dfc794" opacity="0.15"/>
+
+  <!-- Green banner bar at bottom -->
+  <rect y="530" width="1200" height="100" fill="#3d5e40"/>
+
+  <!-- Paw emoji -->
+  <text x="600" y="180" text-anchor="middle" font-size="90">&#x1F43E;</text>
+
+  <!-- Company Name -->
+  <text x="600" y="280" text-anchor="middle" font-family="'Quicksand', 'Segoe UI', sans-serif" font-size="80" font-weight="700" fill="#2d2d2d">Scoop &amp; Go</text>
+
+  <!-- Tagline -->
+  <text x="600" y="340" text-anchor="middle" font-family="'Nunito', 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#3d5e40" letter-spacing="6">DOG WASTE REMOVAL</text>
+
+  <!-- Divider line -->
+  <line x1="480" y1="370" x2="720" y2="370" stroke="#7a9e7e" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Description -->
+  <text x="600" y="420" text-anchor="middle" font-family="'Nunito', 'Segoe UI', sans-serif" font-size="32" fill="#4a4a4a">Professional Garden Cleaning Service</text>
+
+  <!-- Location -->
+  <text x="600" y="470" text-anchor="middle" font-family="'Nunito', 'Segoe UI', sans-serif" font-size="28" fill="#7a9e7e">Merseyside &amp; Cheshire</text>
+
+  <!-- Bottom bar text -->
+  <text x="600" y="590" text-anchor="middle" font-family="'Quicksand', 'Segoe UI', sans-serif" font-size="28" font-weight="700" fill="white">www.scoopandgo.uk  |  0330 043 0508</text>
+</svg>
