@@ -74,7 +74,7 @@ export default function QuoteForm() {
             </div>
 
             <a
-              href="tel:07724564683"
+              href="tel:03300430508"
               className="flex items-center gap-4 rounded-2xl bg-white/70 p-5 shadow-sm backdrop-blur-sm transition-all hover:shadow-md"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-forest/10 text-forest">
@@ -85,7 +85,7 @@ export default function QuoteForm() {
                   Call Us
                 </p>
                 <p className="font-heading text-lg font-bold text-forest">
-                  07724 564683
+                  0330 043 0508
                 </p>
               </div>
             </a>
@@ -99,7 +99,7 @@ export default function QuoteForm() {
                   Email Us
                 </p>
                 <p className="font-heading font-bold text-forest">
-                  simonwilbraham@sky.com
+                  hello@scoopandgo.uk
                 </p>
               </div>
             </div>
@@ -274,7 +274,7 @@ export default function QuoteForm() {
               )}
               {status === 'error' && (
                 <p className="mt-4 text-center font-heading text-sm font-semibold text-red-500">
-                  Something went wrong. Please call us on 07724 564683 instead.
+                  Something went wrong. Please call us on 0330 043 0508 instead.
                 </p>
               )}
             </form>

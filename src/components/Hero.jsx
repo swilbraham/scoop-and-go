@@ -59,11 +59,11 @@ export default function Hero() {
               Get a Free Quote
             </a>
             <a
-              href="tel:07724564683"
+              href="tel:03300430508"
               className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border-2 border-forest/20 bg-white/60 px-8 py-4 font-heading text-lg font-bold text-forest backdrop-blur-sm transition-all hover:border-forest/40 hover:bg-white"
             >
               <HiPhone className="text-xl" />
-              07724 564683
+              0330 043 0508
             </a>
           </motion.div>
 

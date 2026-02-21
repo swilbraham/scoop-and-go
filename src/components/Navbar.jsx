@@ -72,11 +72,11 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden items-center gap-4 lg:flex">
             <a
-              href="tel:07724564683"
+              href="tel:03300430508"
               className="flex items-center gap-2 rounded-full bg-forest px-5 py-2.5 font-heading text-sm font-bold text-white shadow-lg shadow-forest/20 transition-all hover:bg-sage-dark hover:shadow-xl hover:shadow-forest/30"
             >
               <HiPhone className="text-lg" />
-              07724 564683
+              0330 043 0508
             </a>
           </div>
 
@@ -114,11 +114,11 @@ export default function Navbar() {
               ))}
               <div className="pt-4">
                 <a
-                  href="tel:07724564683"
+                  href="tel:03300430508"
                   className="flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-3 font-heading font-bold text-white shadow-lg"
                 >
                   <HiPhone className="text-lg" />
-                  Call Us: 07724 564683
+                  Call Us: 0330 043 0508
                 </a>
               </div>
             </div>

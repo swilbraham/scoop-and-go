@@ -1,4 +1,4 @@
-import { HiPhone, HiMail, HiLocationMarker } from 'react-icons/hi'
+import { HiPhone, HiMail, HiLocationMarker, HiGlobe } from 'react-icons/hi'
 
 const quickLinks = [
   { label: 'Home', href: '#home' },
@@ -86,18 +86,27 @@ export default function Footer() {
             </h4>
             <div className="mt-4 space-y-4">
               <a
-                href="tel:07724564683"
+                href="tel:03300430508"
                 className="flex items-center gap-3 text-sm transition-colors hover:text-sage-light"
               >
                 <HiPhone className="text-lg text-sage-light" />
-                07724 564683
+                0330 043 0508
               </a>
               <a
-                href="mailto:simonwilbraham@sky.com"
+                href="mailto:hello@scoopandgo.uk"
                 className="flex items-center gap-3 text-sm transition-colors hover:text-sage-light"
               >
                 <HiMail className="text-lg text-sage-light" />
-                simonwilbraham@sky.com
+                hello@scoopandgo.uk
+              </a>
+              <a
+                href="https://www.scoopandgo.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-sm transition-colors hover:text-sage-light"
+              >
+                <HiGlobe className="text-lg text-sage-light" />
+                www.scoopandgo.uk
               </a>
               <div className="flex items-center gap-3 text-sm">
                 <HiLocationMarker className="text-lg text-sage-light" />

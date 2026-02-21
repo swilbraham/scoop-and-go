@@ -35,11 +35,11 @@ export default function FinalCTA() {
               Get a Free Quote
             </a>
             <a
-              href="tel:07724564683"
+              href="tel:03300430508"
               className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 font-heading text-lg font-bold text-white backdrop-blur-sm transition-all hover:border-white/60 hover:bg-white/10"
             >
               <HiPhone className="text-xl" />
-              07724 564683
+              0330 043 0508
             </a>
           </div>
         </div>
