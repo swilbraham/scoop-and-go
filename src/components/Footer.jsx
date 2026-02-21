@@ -1,4 +1,5 @@
 import { HiPhone, HiMail, HiLocationMarker, HiGlobe } from 'react-icons/hi'
+import { FaFacebook, FaInstagram } from 'react-icons/fa'
 
 const quickLinks = [
   { label: 'Home', href: '#home' },
@@ -44,6 +45,27 @@ export default function Footer() {
               across Merseyside & Cheshire. Keeping your garden clean, safe,
               and enjoyable.
             </p>
+            {/* Social Links */}
+            <div className="mt-6 flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/Scoopandgonw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-sage/30 hover:text-sage-light"
+                aria-label="Follow us on Facebook"
+              >
+                <FaFacebook className="text-lg" />
+              </a>
+              <a
+                href="https://www.instagram.com/Scoopandgonw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-sage/30 hover:text-sage-light"
+                aria-label="Follow us on Instagram"
+              >
+                <FaInstagram className="text-lg" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
