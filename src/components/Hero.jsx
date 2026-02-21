@@ -120,7 +120,7 @@ export default function Hero() {
 
       {/* Wave divider */}
       <div className="absolute bottom-0 left-0 w-full">
-        <svg viewBox="0 0 1440 100" fill="none" className="w-full">
+        <svg viewBox="0 0 1440 100" fill="none" className="w-full" aria-hidden="true">
           <path
             d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V100H0V40Z"
             fill="var(--color-warm-white)"

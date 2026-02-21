@@ -1,0 +1,6 @@
+# Scoop & Go - Dog Waste Removal
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.scoopandgo.uk/sitemap.xml
