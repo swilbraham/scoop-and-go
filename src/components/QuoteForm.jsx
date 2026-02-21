@@ -1,11 +1,6 @@
 import { motion } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { HiPhone, HiMail, HiLocationMarker } from 'react-icons/hi'
-import emailjs from '@emailjs/browser'
-
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID'
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID'
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
 
 const vp = { once: true, amount: 0 }
 
@@ -18,9 +13,18 @@ export default function QuoteForm() {
     setStatus('sending')
 
     try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-      setStatus('sent')
-      formRef.current.reset()
+      const formData = new FormData(formRef.current)
+      const res = await fetch('https://formsubmit.co/ajax/hello@scoopandgo.uk', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData,
+      })
+      if (res.ok) {
+        setStatus('sent')
+        formRef.current.reset()
+      } else {
+        setStatus('error')
+      }
     } catch {
       setStatus('error')
     }
@@ -132,6 +136,11 @@ export default function QuoteForm() {
               onSubmit={handleSubmit}
               className="rounded-3xl bg-white/80 p-8 shadow-lg backdrop-blur-sm lg:p-10"
             >
+              {/* Formsubmit.co settings */}
+              <input type="hidden" name="_subject" value="New Quote Request from Scoop & Go Website" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <label
@@ -143,7 +152,7 @@ export default function QuoteForm() {
                   <input
                     type="text"
                     id="name"
-                    name="from_name"
+                    name="Name"
                     required
                     className="w-full rounded-xl border border-sage-light/30 bg-cream/30 px-4 py-3 text-charcoal outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage-light/30"
                     placeholder="John Smith"
@@ -160,7 +169,7 @@ export default function QuoteForm() {
                   <input
                     type="email"
                     id="email"
-                    name="from_email"
+                    name="Email"
                     required
                     className="w-full rounded-xl border border-sage-light/30 bg-cream/30 px-4 py-3 text-charcoal outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage-light/30"
                     placeholder="john@example.com"
@@ -177,7 +186,7 @@ export default function QuoteForm() {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
+                    name="Phone"
                     className="w-full rounded-xl border border-sage-light/30 bg-cream/30 px-4 py-3 text-charcoal outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage-light/30"
                     placeholder="07xxx xxxxxx"
                   />
@@ -193,7 +202,7 @@ export default function QuoteForm() {
                   <input
                     type="text"
                     id="postcode"
-                    name="postcode"
+                    name="Postcode"
                     required
                     className="w-full rounded-xl border border-sage-light/30 bg-cream/30 px-4 py-3 text-charcoal outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage-light/30"
                     placeholder="CH43 or area name"
@@ -209,7 +218,7 @@ export default function QuoteForm() {
                   </label>
                   <select
                     id="dogs"
-                    name="number_of_dogs"
+                    name="Number of Dogs"
                     className="w-full rounded-xl border border-sage-light/30 bg-cream/30 px-4 py-3 text-charcoal outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage-light/30"
                   >
                     <option value="1">1 dog</option>
@@ -228,7 +237,7 @@ export default function QuoteForm() {
                   </label>
                   <select
                     id="frequency"
-                    name="frequency"
+                    name="Frequency"
                     className="w-full rounded-xl border border-sage-light/30 bg-cream/30 px-4 py-3 text-charcoal outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage-light/30"
                   >
                     <option value="weekly">Weekly</option>
@@ -248,7 +257,7 @@ export default function QuoteForm() {
                 </label>
                 <textarea
                   id="message"
-                  name="message"
+                  name="Message"
                   rows={4}
                   className="w-full rounded-xl border border-sage-light/30 bg-cream/30 px-4 py-3 text-charcoal outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage-light/30 resize-none"
                   placeholder="Tell us about your garden, any specific requirements, etc."
