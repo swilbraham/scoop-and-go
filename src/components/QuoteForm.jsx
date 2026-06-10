@@ -14,12 +14,13 @@ export default function QuoteForm() {
 
     try {
       const formData = new FormData(formRef.current)
-      const res = await fetch('https://formsubmit.co/ajax/hello@scoopandgo.uk', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: formData,
       })
-      if (res.ok) {
+      const data = await res.json()
+      if (data.success) {
         setStatus('sent')
         formRef.current.reset()
       } else {
@@ -136,10 +137,12 @@ export default function QuoteForm() {
               onSubmit={handleSubmit}
               className="rounded-3xl bg-white/80 p-8 shadow-lg backdrop-blur-sm lg:p-10"
             >
-              {/* Formsubmit.co settings */}
-              <input type="hidden" name="_subject" value="New Quote Request from Scoop & Go Website" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
+              {/* Web3Forms settings — get a FREE access key at https://web3forms.com (enter hello@scoopandgo.uk) and paste it below */}
+              <input type="hidden" name="access_key" value="23f4183b-38f0-4aaa-9a95-c38d8d238b56" />
+              <input type="hidden" name="subject" value="New Quote Request from Scoop & Go Website" />
+              <input type="hidden" name="from_name" value="Scoop & Go Website" />
+              {/* Honeypot spam filter — must stay empty/hidden */}
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
